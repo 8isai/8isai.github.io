@@ -63,7 +63,7 @@
             z-index: 1; /* Ensure it's above other elements */
         }
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADPTzE5wBrMXV3nPb1sHX5MIuYFUY8VYs&libraries=places"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
 </head>
 <body>
@@ -89,25 +89,7 @@
             // Try HTML5 geolocation.
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
-                    var pos = {lat: position.coords.latitude,lng: position.coords.longitude};
-                    var infowindow = new google.maps.InfoWindow();
-                    circleMarker = new google.maps.Circle({
-                        strokeColor: '#FF0000',
-                        strokeOpacity: 0.8,
-                        strokeWeight: 2,
-                        fillColor: '#FF0000',
-                        fillOpacity: 0.35,
-                        map: map,
-                        center: pos,
-                        radius: 1.5 // 1.5 meters radius around the user's location
-                    });
-
-                    infowindow.setPosition(pos);
-                    infowindow.setContent('You are here!');
-                    infowindow.open(map);
-                    map.setCenter(pos);
-
-                    // Add circle marker at current location
+                    var pos = {lat: position.coords.latitude, lng: position.coords.longitude};
                     addCircleMarker(pos);
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
@@ -117,30 +99,18 @@
                 handleLocationError(false, infoWindow, map.getCenter());
             }
 
-            // Zoom to current location button event listener
-            document.getElementById('zoomToCurrentLocationBtn').addEventListener('click', function() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function(position) {
-                        var pos = {lat: position.coords.latitude,lng: position.coords.longitude};
-                        map.setCenter(pos);
-                        map.setZoom(18);
-                    }, function() {
-                        handleLocationError(true, infoWindow, map.getCenter());
-                    });
-                } else {
-                    // Browser doesn't support Geolocation
-                    handleLocationError(false, infoWindow, map.getCenter());
-                }
-            });
-
             // Add event listener for visibility change
             document.addEventListener("visibilitychange", function() {
                 if (document.hidden) {
                     // Hide marker and circle when the user leaves the page
-                    circleMarker.setMap(null);
+                    if (circleMarker) {
+                        circleMarker.setMap(null);
+                    }
                 } else {
                     // Show marker and circle when the user returns to the page
-                    circleMarker.setMap(map);
+                    if (circleMarker) {
+                        circleMarker.setMap(map);
+                    }
                 }
             }, false);
         }
@@ -201,6 +171,6 @@
         }
     </script>
     <!-- Call the initMap() function to initialize the map -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADPTzE5wBrMXV3nPb1sHX5MIuYFUY8VYs&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
