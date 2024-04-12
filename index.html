@@ -1,27 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Google Maps Circle Marker Counter</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADPTzE5wBrMXV3nPb1sHX5MIuYFUY8VYs&libraries=geometry"></script>
+    <title>Google Maps Example</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry"></script>
     <style>
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-        #counter {
-            position: absolute;
+        #visitor-count {
+            position: fixed;
             bottom: 10px;
             left: 10px;
-            background-color: #fff;
-            padding: 10px;
-            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        #visitor-count:hover {
+            background-color: rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <div id="map"></div>
-    <div id="counter">Circle Marker Count: <span id="circleMarkerCounter">0</span></div>
-    
-    <script src="script.js"></script>
+    <div id="visitor-count" onclick="toggleVisitorCount()"></div>
+    <div id="map" style="height: 400px; width: 100%;"></div>
+
+    <script>
+        let map;
+        let marker;
+        let visitorCount = 0;
+        const visitorCountElement = document.getElementById('visitor-count');
+        
+        function updateVisitorCount() {
+            visitorCountElement.textContent = visitorCount;
+        }
+
+        function toggleVisitorCount() {
+            if (visitorCountElement.textContent === "") {
+                visitorCountElement.textContent = visitorCount;
+            } else {
+                visitorCountElement.textContent = "";
+            }
+        }
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8
+            });
+
+            addMarkerAtCurrentLocation();
+            incrementVisitorCount();
+
+            window.addEventListener('beforeunload', function () {
+                decrementVisitorCount();
+                if (marker) {
+                    marker.setMap(null);
+                }
+            });
+        }
+
+        function addMarkerAtCurrentLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    const userLocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    marker = new google.maps.Marker({
+                        position: userLocation,
+                        map: map,
+                        title: 'Your Location'
+                    });
+
+                    const circle = new google.maps.Circle({
+                        map: map,
+                        radius: 10000, // 10 kilometers
+                        fillColor: '#AA0000',
+                        fillOpacity: 0.3,
+                        strokeColor: '#FF0000',
+                        strokeOpacity: 0.8,
+                        strokeWeight: 2
+                    });
+                    circle.bindTo('center', marker, 'position');
+
+                    map.setCenter(userLocation);
+                }, function () {
+                    console.error('Error: The Geolocation service failed.');
+                });
+            } else {
+                console.error('Error: Your browser doesn\'t support geolocation.');
+            }
+        }
+
+        function incrementVisitorCount() {
+            visitorCount++;
+            updateVisitorCount();
+        }
+
+        function decrementVisitorCount() {
+            visitorCount--;
+            updateVisitorCount();
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADPTzE5wBrMXV3nPb1sHX5MIuYFUY8VYs&callback=initMap"></script>
 </body>
 </html>
