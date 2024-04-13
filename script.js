@@ -1,5 +1,5 @@
 // Replace 'YOUR_API_KEY' with your actual Google Maps API key
-const apiKey = 'YOUR_API_KEY';
+const apiKey = 'AIzaSyADPTzE5wBrMXV3nPb1sHX5MIuYFUY8VYs';
 
 function initMap() {
   navigator.geolocation.getCurrentPosition(function(position) {
