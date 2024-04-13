@@ -24,6 +24,6 @@ function initMap() {
 // Load Google Maps API
 window.onload = function() {
   const script = document.createElement('script');
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+  script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyADPTzE5wBrMXV3nPb1sHX5MIuYFUY8VYs&callback=initMap`;
   document.body.appendChild(script);
 };
