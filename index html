@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Map</title>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+    #chatbox {
+      width: 100%;
+    }
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADPTzE5wBrMXV3nPb1sHX5MIuYFUY8VYs"></script>
+</head>
+<body>
+  <div id="map"></div>
+  <input type="text" id="message" placeholder="Type your message..." />
+  <button id="send">Send</button>
+  <script src="script.js"></script>
+</body>
+</html>
