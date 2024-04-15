@@ -37,9 +37,10 @@ body.container {
  padding: 20%; 
                }
 @media screen and (max-width: 600px) {
- body.container {
-  font-size: 50px;
-  padding: 2%; 
-                }
+ #product, #contact, #home, #header, #content {
+ font-size: 40px;
+ padding-left: 3%;
+ padding-right: 3%;    
+                                               }
                                      }
         
