@@ -36,22 +36,15 @@ text-decoration: none;
 body.container {
  padding: 20%; 
                }
-@media only screen and (max-width: 600px) {
-        #product {
-          font-size: 40px;
-          padding: 2%;
-        }
-      
+ @media only screen and (max-width: 600px) {
+        #product,
         #contact,
         #home,
         #header,
         #content {
           font-size: 40px; /* Adjust the font size as needed */
-        }
-      
-        #content {
           padding-left: 2%;
           padding-right: 2%;
         }
-      }
+}
         
