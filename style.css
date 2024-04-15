@@ -6,7 +6,7 @@ body{
  background-color: #222831;
  @media screen and (max-width: 600px) {
         
-          font-size: 30px; /* Increase the font size for smaller screens */
+          font-size: 40px; /* Increase the font size for smaller screens */
         
      }
 }
