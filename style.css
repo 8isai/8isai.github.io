@@ -4,12 +4,7 @@ head{
 body{
  text-align: center;
  background-color: #222831;
- @media screen and (max-width: 600px) {
-        
-          font-size: 40px; /* Increase the font size for smaller screens */
-        
-     }
-}
+ }
 #product{
  font-size: 22px;
  color: aqua;
@@ -38,4 +33,13 @@ a:visited{
 a{
 text-decoration: none;
  }
+body.container {
+ padding: 20%; 
+               }
+@media screen and (max-width: 600px) {
+ body.container {
+  font-size: 50px;
+  padding: 2%; 
+                }
+                                     }
         
