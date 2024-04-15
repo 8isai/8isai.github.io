@@ -4,7 +4,7 @@ head{
 body{
  text-align: center;
  background-color: #222831;
- }
+}
 #product{
  font-size: 22px;
  color: aqua;
@@ -24,7 +24,7 @@ body{
 #content{
  padding-left: 20%;
  padding-right: 20%;
- font-size: 30px;
+ font-size: 18px;
  color: whitesmoke;
         }
 a:visited{
@@ -32,19 +32,12 @@ a:visited{
          }
 a{
 text-decoration: none;
+color: inherit;
  }
-body.container {
- padding: 20%; 
-               }
 @media (max-width: 768px) {
-        #product,
-        #contact,
-        #home,
-        #header,
-        #content {
-          font-size: 1.5em; /* Adjust the font size as needed */
-          padding-left: 1em;
-          
-        }
-}
+ #product,#contact,#home,#header,#content {
+          font-size: 1em;
+          padding: 0.5em;
+                                          }
+                          }
         
