@@ -1,0 +1,36 @@
+head{
+ text-align: center;
+    }
+body{
+ text-align: center;
+ background-color: #222831;
+}
+#product{
+ font-size: 22px;
+ color: aqua;
+        }
+#contact{
+ font-size: 18px;
+ color: greenyellow;
+}
+#home{
+ font-size: 18px;
+ color: wheat;
+     }
+#header{
+ font-size: 20px;
+ color: white; 
+       }
+#content{
+ padding-left: 20%;
+ padding-right: 20%;
+ font-size: 18px;
+ color: whitesmoke;
+        }
+a:visited{
+ color:white;
+         }
+a{
+text-decoration: none;
+ }
+        
