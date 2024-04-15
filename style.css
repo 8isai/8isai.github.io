@@ -1,21 +1,25 @@
 html{
- text-align: center;
- letter-spacing: 1.2px;
+ letter-spacing: 1.1px;
  background-color: #222831;
 }
 #product{
+ text-align: center;
  font-size: 20px;
  color: aqua;
         }
 #contact{
+ text-align: center;
  font-size: 18px;
  color: greenyellow;
 }
 #home{
+ padding-left: 20%;
  font-size: 18px;
  color: wheat;
      }
 #header{
+ padding-left: 20%;
+ padding-right: 20%;
  font-size: 20px;
  color: white;
        }
@@ -23,9 +27,7 @@ html{
  padding-left: 20%;
  padding-right: 20%;
  line-height: 1.8;
- text-align: left;
  font-size: 20px;
- 
  color: whitesmoke;
         }
 a:visited{
@@ -41,3 +43,11 @@ color: inherit;
           padding: 0.5em;
                                           }
                           }
+      
+             
+               
+             
+          
+
+      
+      
