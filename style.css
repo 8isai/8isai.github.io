@@ -1,12 +1,11 @@
-head{
+html{
  text-align: center;
-    }
-body{
- text-align: center;
+ letter-spacing: 1.2px;
+ 
  background-color: #222831;
 }
 #product{
- font-size: 22px;
+ font-size: 20px;
  color: aqua;
         }
 #contact{
@@ -19,12 +18,14 @@ body{
      }
 #header{
  font-size: 20px;
- color: white; 
+ color: white;
        }
 #content{
  padding-left: 20%;
  padding-right: 20%;
- font-size: 18px;
+ line-height: 1.8;
+ font-size: 20px;
+ 
  color: whitesmoke;
         }
 a:visited{
@@ -40,4 +41,3 @@ color: inherit;
           padding: 0.5em;
                                           }
                           }
-        
