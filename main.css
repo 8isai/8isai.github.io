@@ -29,7 +29,7 @@ a{
     color: inherit;
 }
 @media (max-width: 768px) {
-    body {
+    .platform, .product, .menu, .tnh, .content {
     font-size: 1em;
     padding: 0.5em;
 }
