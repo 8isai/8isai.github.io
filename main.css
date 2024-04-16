@@ -1,0 +1,36 @@
+body{
+    background-color: #222831;
+}
+table{
+    width: 60%;
+    margin: auto;
+}
+td{
+    padding: 10px;
+}
+.platform{
+    text-align: center;
+    font-size: 18px;
+    color: greenyellow;
+    word-spacing: 20px;
+}
+.product{
+    text-align: center;
+    font-size: 20px;
+    color: aquamarine;
+}
+.menu{
+    
+    font-size: 18px;
+    color: wheat;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+@media (max-width: 768px) {
+    #product,#contact,#home,#header,#content {
+    font-size: 1em;
+    padding: 0.5em;
+}
+}
