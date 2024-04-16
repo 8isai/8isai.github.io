@@ -9,7 +9,7 @@
     word-spacing: 2.7px;
 }
 @media (max-width: 768px) {
-    table {
+    body {
     font-size: 1em;
     padding: 0.5em;
 }
