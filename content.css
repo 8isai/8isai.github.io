@@ -1,10 +1,15 @@
 .h{
     font-size: 22px;
-    color: whitesmoke;
+    color: white;
 }
 .content{
     font-size: 20px;
-    color: whitesmoke;
+    color: white;
     line-height: 1.6;
     word-spacing: 1.5px;
+}
+.referral{
+    font-size: 20px;
+    color: orange;
+    font-weight: bold;
 }
