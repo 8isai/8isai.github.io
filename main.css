@@ -29,7 +29,7 @@ a{
     color: inherit;
 }
 @media (max-width: 768px) {
-    #product,#contact,#home,#header,#content {
+    table {
     font-size: 1em;
     padding: 0.5em;
 }
