@@ -2,9 +2,3 @@
     font-size: 20px;
     color :white
 }
-@media (max-width: 768px) {
-    body {
-    font-size: 1em;
-    padding: 0.5em;
-}
-}
