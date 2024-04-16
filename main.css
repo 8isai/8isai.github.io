@@ -5,7 +5,8 @@ table{
     width: 100%;
 }
 td{
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .platform{
     text-align: center;
