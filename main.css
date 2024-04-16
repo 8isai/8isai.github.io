@@ -30,7 +30,6 @@ a{
 }
 @media (max-width: 768px) {
     .platform, .product, .menu, .tnh, .h, .content {
-    font-size: 1em;
-    padding: 0.5em;
+   
 }
 }
