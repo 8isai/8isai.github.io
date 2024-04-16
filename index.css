@@ -3,7 +3,7 @@
     color :white
 }
 @media (max-width: 768px) {
-    table {
+    body {
     font-size: 1em;
     padding: 0.5em;
 }
