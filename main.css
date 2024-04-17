@@ -3,6 +3,7 @@ body{
 }
 table{
     width: 96%;
+    margin: auto;
 }
 td{
     padding-top: 10px;
